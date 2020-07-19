@@ -15,5 +15,7 @@
 
         <mapping class="entity.Message"/>
         <mapping class="entity.Person"/>
+        <mapping class="entity.Student"/>
+        <mapping class="entity.Guide"/>
     </session-factory>
 </hibernate-configuration>
