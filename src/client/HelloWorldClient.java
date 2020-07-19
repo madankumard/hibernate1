@@ -9,8 +9,21 @@ public class HelloWorldClient {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
-        Message message = new Message("Hello World");
-        session.save(message);
+        //Save
+        //Message message = new Message("Hello World");
+        //session.save(message);
+
+        //Get
+        //Message message = session.get(Message.class, 2L);
+        //System.out.println(message);
+
+        //Update
+        Message message = session.get(Message.class, 3L);
+        message.setText("Automatic Dirty Check 2");
+
+        //Delete
+        message = session.get(Message.class, 4L);
+        session.delete(message);
 
         session.getTransaction().commit();
         session.close();
