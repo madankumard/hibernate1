@@ -13,9 +13,11 @@
         <property name="show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
 
+        <mapping class="entity.Actor"/>
         <mapping class="entity.Message"/>
         <mapping class="entity.Person"/>
         <mapping class="entity.Student"/>
         <mapping class="entity.Guide"/>
+        <mapping class="entity.Movie"/>
     </session-factory>
 </hibernate-configuration>
