@@ -1,6 +1,8 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Guide {
@@ -16,6 +18,9 @@ public class Guide {
 
     private Integer salary;
 
+    @OneToMany(mappedBy = "guide", cascade = {CascadeType.PERSIST})
+    private Set<Student> students = new HashSet<>();
+
     public Guide() {
     }
 
@@ -23,5 +28,13 @@ public class Guide {
         this.staffId = staffId;
         this.name = name;
         this.salary = salary;
+    }
+
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
     }
 }
