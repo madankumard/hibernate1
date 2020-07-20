@@ -20,5 +20,6 @@
         <mapping class="entity.Guide"/>
         <mapping class="entity.Movie"/>
         <mapping class="entity.Employee"/>
+        <mapping class="entity.Friend"/>
     </session-factory>
 </hibernate-configuration>
