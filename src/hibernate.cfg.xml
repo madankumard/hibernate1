@@ -19,5 +19,6 @@
         <mapping class="entity.Student"/>
         <mapping class="entity.Guide"/>
         <mapping class="entity.Movie"/>
+        <mapping class="entity.Employee"/>
     </session-factory>
 </hibernate-configuration>
